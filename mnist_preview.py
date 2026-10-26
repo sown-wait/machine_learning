@@ -36,11 +36,7 @@ def main():
     print(f"Number of classes: {len(train_data.classes)}")
     print(f"Class labels: {train_data.classes}")
 
-    # 每个数字类别随机选择一张，确保 0～9 都能展示出来。
-    sample_indices = []
-    for digit in range(10):
-        digit_indices = (train_data.targets == digit).nonzero(as_tuple=True)[0].tolist()
-        sample_indices.append(random.choice(digit_indices))
+    sample_indices = random.sample(range(len(train_data)), 10)#随机选择 10 个样本索引
     figure, axes = plt.subplots(2, 5, figsize=(10, 5))#创建 2 行 5 列共 10 个子图，画布尺寸 10×5 英寸
 
     """
@@ -53,7 +49,7 @@ def main():
     ):
         image, label = train_data[index]#按索引取出图像和标签
         axis.imshow(image.squeeze(0), cmap="gray")#显示图像，去通道维度，使用灰度图映射
-        axis.set_title(f"Digit {label}")#给子图设置标题，显示真实标签。
+        axis.set_title(f"Image {sample_number} -> Label: {label}")#给子图设置标题，显示第几张图及其真实标签。
         axis.axis("off")#关闭子图的坐标轴，只显示图像。
 
     figure.tight_layout()#自动调整子图间距，避免标题等元素重叠
