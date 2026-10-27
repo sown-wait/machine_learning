@@ -12,7 +12,7 @@ python .\mnist_preview.py
 ![mnist_preview](image/dycxljg.png)
 ![mnist_preview](image/sztp.png)
 
-# 运行随机森林分类
+# 三，运行随机森林分类
 先关闭图片窗口，然后在项目目录运行随机森林模型：
 ```bash
 python .\Task1_MNIST\mnist_random_forest.py
@@ -25,3 +25,22 @@ python .\Task1_MNIST\mnist_random_forest.py
 - 最后弹出 10 张预测结果。
 ![mnist_random_forest](image/sjslxljg2.png)
 ![mnist_random_forest](image/sjslxljg.png)
+# 四，构建cnn卷积神经网络并运行
+```bash
+python .\Task1_MNIST\mnist_cnn.py
+```
+它会训练 5 轮。每轮会显示,
+训练 Loss,
+训练 Accuracy,
+测试 Loss,
+测试 Accuracy\
+\
+CPU 训练需要一些时间，运行时不要关闭窗口。完成后会保存：
+- CNN 模型
+- Loss 和 Accuracy 曲线
+- 混淆矩阵
+- 10 张随机预测结果
+- 最终准确率和训练时间
+![mnist_cnn](image/CNNxljg1.png)
+![mnist_cnn](Task1_MNIST\result\cnn_training_curves.png)
+![mnist_cnn](image/CNNxljg.png)
