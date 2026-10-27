@@ -44,3 +44,13 @@ CPU 训练需要一些时间，运行时不要关闭窗口。完成后会保存�
 ![mnist_cnn](image/CNNxljg1.png)
 ![mnist_cnn](Task1_MNIST\result\cnn_training_curves.png)
 ![mnist_cnn](image/CNNxljg.png)
+
+# 五，构建Transformer模型并运行
+
+```bash
+python .\Task1_MNIST\mnist_transformer.py
+```
+Transformer 会把每张 28×28 图片切成 49 个小块，再学习这些小块之间的关系。CPU 训练可能比 CNN 慢一些；看到每轮的 Epoch ... 输出就表示正在正常训练。
+![mnist_transformer](image/Transformerxljg.png)
+![mnist_transformer](Task1_MNIST\result\transformer_predictions.png)
+![mnist_transformer](Task1_MNIST\result\transformer_training_curves.png)
